@@ -4,7 +4,7 @@
  * @Email        : gouqingping@yahoo.com
  * @Date         : 2020-07-31 15:23:05
  * @LastEditors  : Pat
- * @LastEditTime : 2020-12-30 20:32:11
+ * @LastEditTime : 2020-12-30 21:11:15
 -->
 <div align="center">
 	<div style="width:128px;height:128px;line-height:128px;font-size:36px;border-radius:50%;text-align:center;color:white;background-color:#d43544;box-shadow: 0 0 10px 0 rgba(0,0,0,.4);margin-bottom:15px;border:6px solid rgba(255,0,0,0.6)">AmbFs</div>
@@ -13,6 +13,10 @@
 	<span style="height:60px;border-radius: 0 2px 2px 0;background-color: #d43544;color:white;padding:0 5px;font-size:12px;margin-left:-5px;">v1.0.61</span>
 </div>
 
+
+
+
+# v1.0.61
 
 系统配置文件生成器（解决多余IP暴露引起的安全性问题）
 
