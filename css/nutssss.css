@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.meBox {
+    float: left;
+    width: 20rem;
+    height: 25rem;
+    background-color: white;
+    margin-top: 100px;
+    margin-left: 10%;
+    border-radius: 2%;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.meBox:hover {
+    width: 21rem;
+    height: 26rem;
+    margin: 95px 0 0 9.5%;
+}
+
+.headPhoto {
+    width: 8rem;
+    height: 8rem;
+    background: url("../img/photo.png") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    top: -15%;
+    left: 50%;
+    margin-left: -4rem;
+    transition: all 0.3s;
+}
+
+.meBox:hover .headPhoto {
+    width: 9rem;
+    height: 9rem;
+    margin: -0.5rem 0 0 -4.5rem;
+    transform: rotate(360deg);
+}
+
+.headPhoto:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.meBox-title {
+    width: auto;
+    margin: 0 auto;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.meBox-title p {
+    font-size: 1.2rem;
+    border-right: .1em solid;
+    width: 12ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20, end), blink-caret .3s step-end infinite alternate;
+    margin: -30px 0 0 90px;
+    transition: all 0.3s;
+}
+
+.meBox:hover .meBox-title p {
+    font-size: 1.3rem;
+}
+
+.meBox-title .fg {
+    width: 80%;
+    height: 2px;
+    background-image: linear-gradient(to left, #3498db, #2980b9);
+    margin: 5% 0 0 10%;
+}
+
+.meBox-text {
+    width: 80%;
+    height: 45%;
+    overflow: hidden;
+    text-align: center;
+    color: rgb(70, 70, 70);
+    animation-name: meBox-text;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    margin: 5% 0 0 10%;
+    transition: all 0.3s;
+}
+
+.meBox-text p {
+    margin-top: 5px;
+}
+
+.meBox:hover .meBox-text {
+    font-size: 1.05rem;
+}
+
+@keyframes meBox-text {
+    0% {
+        transform: translateY(50px);
+        color: white;
+    }
+
+    100% {
+        transform: translateY(0);
+        color: rgb(70, 70, 70);
+    }
+}
+
+.meBox-Button {
+    width: 100%;
+}
+
+.meBox-Button a {
+    display: inline-block;
+    float: left;
+    width: 158px;
+    height: 50px;
+    margin-top: 13px;
+    line-height: 50px;
+    text-decoration: none;
+    color: gray;
+    transition: all 0.3s;
+}
+
+.meBox-Button a:hover {
+    color: rgb(0, 132, 255);
+    font-size: 1.2rem;
+}
+
+.meBox:hover .meBox-Button a {
+    width: 165px;
+    margin-top: 10px;
+}
+
+/* 自适应 */
+@media screen and (max-width: 1250px)
+{
+    .meBox {
+        margin-left: 3%;
+    }
+
+    .meBox:hover {
+        width: 21rem;
+        height: 26rem;
+        margin: 95px 0 0 2.5%;
+    }
+
+    #cmdBox {
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 1110px)
+{
+    .meBox {
+        float: none;
+        margin: 100px auto 100px;
+    }
+
+    .meBox:hover {
+        width: 21rem;
+        height: 26rem;
+        margin: 95px auto 95px;
+    }
+
+    #cmdBox {
+        float: none;
+        margin: 0 auto 100px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .meBox {
+        width: 300px;
+    }
+
+    .meBox:hover {
+        width: 300px;
+        height: 25rem;
+        margin: 100px auto 100px;
+    }
+
+    .meBox-Button a:hover {
+        color: rgb(0, 132, 255);
+    }
+    
+    .meBox:hover .meBox-Button a {
+        width: 150px;
+        margin-top: 0;
+    }
+
+    .meBox:hover .meBox-title p {
+        font-size: 1.2rem;
+    }
+
+    .meBox:hover .headPhoto {
+        width: 8rem;
+        height: 8rem;
+        margin: -0.5rem 0 0 -4rem;
+        transform: rotate(360deg);
+    }
+
+    .meBox:hover .meBox-text {
+        font-size: 1rem;
+    }
+
+    .meBox-Button a {
+        width: 150px;
+    }
+
+    #cmdBox {
+        width: 100%;
+        height: 850px;
+    }
+
+    .cmd {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cmd2 {
+        position: relative;
+        top: 20px;
+        left: 0;
+    }
+
+    .cmd:hover {
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+        z-index: 1;
+    }
+}
+
+
+.body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --radius: 2px;
+    --pad: 15px;
+    --dColor: #30b9d4;
+    --fontColor: #333;
+    --lineHeight: 35px;
+    margin: 0;
+    padding: 0;
+    font: 16px/20px microsft yahei;
+  }
+  .body * {
+    box-sizing: border-box;
+  }
+  .body .wrap {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+    position: fixed;
+    opacity: 0.8;
+    display: flex;
+    background: linear-gradient(to bottom right, #00152a, var(--dColor));
+  }
+  .body .wrap ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+  }
+  .body .wrap ul li {
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    bottom: -120px;
+    width: 15px;
+    height: 15px;
+    z-index: -8;
+    background-color: rgba(255, 255, 255, 0.15);
+    animation: square 25s infinite;
+  }
+  .body .wrap ul li:nth-child(1) {
+    left: 0;
+    animation-duration: 10s;
+  }
+  .body .wrap ul li:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 15s;
+  }
+  .body .wrap ul li:nth-child(3) {
+    left: 20%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+  }
+  .body .wrap ul li:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 30%;
+    animation-delay: 3s;
+    animation-duration: 12s;
+  }
+  .body .wrap ul li:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    left: 40%;
+    animation-duration: 10s;
+  }
+  .body .wrap ul li:nth-child(6) {
+    width: 75px;
+    height: 75px;
+    left: 50%;
+    animation-delay: 7s;
+  }
+  .body .wrap ul li:nth-child(7) {
+    left: 60%;
+    animation-duration: 8s;
+  }
+  .body .wrap ul li:nth-child(8) {
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    animation-delay: 4s;
+  }
+  .body .wrap ul li:nth-child(9) {
+    width: 100px;
+    height: 100px;
+    left: 80%;
+    animation-duration: 20s;
+  }
+  .body .wrap ul li:nth-child(10) {
+    width: 120px;
+    height: 120px;
+    left: 90%;
+    animation-delay: 6s;
+    animation-duration: 30s;
+  }
+  .body .wrap .container {
+    width: 60%;
+    margin: auto;
+  }
+  .body .wrap .container h1,
+  .body .wrap .container h2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 15px;
+  }
+  .body .wrap .container .ruleForm {
+    width: 320px;
+    margin: auto;
+    padding-top: 15px;
+  }
+  .body .wrap .container input {
+    display: block;
+    height: 36px;
+    border: 0;
+    outline: 0;
+    padding: 6px 10px;
+    line-height: 24px;
+    transition: all 0.4s ease-in 0.1ms;
+  }
+  .body .wrap .container input[type=text], .body .wrap .container input[type=password] {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #50a3a2;
+  }
+  .body .wrap .container .Login {
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #666666;
+    background-color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  @keyframes square {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      bottom: 100%;
+      transform: rotate(600deg);
+      transform: translateY(-500);
+    }
+  }
